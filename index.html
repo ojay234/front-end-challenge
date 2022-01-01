@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title> E-commerce product page</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+  href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,100;1,300;1,400&display=swap"
+  rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="popup" id="popup">
+    <div class = "top-bar">
+     <img onclick="closePopup('click')" class="close-btn" src="images/icon-close-2.svg" alt="">
+    </div>
+    <div class="arrow-button">
+    <button class="left-arrow"><</button>
+    <button class="right-arrow">></button>
+    </div>
+      <div class="grid">
+        <img class=" grid-item grid-item-1"   id="image1" src="images/image-product-1.jpg" alt="">
+        <div class="grid-item grid-item-2" id="image2">
+          <img class="img active" src="images/image-product-1-thumbnail.jpg" alt="">
+          <img class="img" src="images/image-product-2-thumbnail.jpg" alt="">
+          <img class="img" src="images/image-product-3-thumbnail.jpg" alt="">
+          <img class="img" src="images/image-product-4-thumbnail.jpg" alt="">
+        </div>
+      </div>
+  </div>
+
+  <header id="header" class="header">
+    <div class="hamburger">
+      <img src="images/icon-menu.svg" alt="">
+      <img src="images/icon-close.svg" alt="">
+    </div>
+    <nav class="nav-container">
+      <img  class="grid-item grid-item-1" src="images/logo.svg" alt="">
+      <div id="nav-menu" class="grid-item  grid-item-2">
+         <ul class="nav-list">
+            <li> <a href="">Collections</a></li>
+            <li> <a href="">Men</a></li>
+            <li> <a href=""> Women </a></li>
+            <li> <a href=""> About </a></li>
+            <li> <a href=""> Contact </a></li>
+         </ul>
+      </div>
+      </div>
+      <div class="grid-item grid-item-3">
+        <h1 onclick="showCart('click')"  class="cart-head"><img src="images/icon-cart.svg" alt=""></h1>
+        <div class="image-container">
+        <img src="images/image-avatar.png" alt="">
+        </div>
+      </div>
+    </nav>
+
+    <div class="cart">
+     <p  class="heading"> cart </p>
+     <div class="line2"></div>
+     <div class="products" id="products">
+        <img class="grid-item grid-item-1" src="images/image-product-1-thumbnail.jpg" alt="">
+        <div class="grid-item grid-item-2">
+          <p>Fall Limited Edition Sneakers</p>
+          <p class="paragraph2">$125.00 x <em class="product-number">1</em> <em class="total-price"> $125.00</em></p>
+        </div>
+        <img  onclick="deleteCart('click')" class="grid-item grid-item-3" src="images/icon-delete.svg" alt="">
+        <button>Check</button>
+        </div>
+        <p class="empty-cart"> Your cart is empty</p>
+    </div>
+    </div>
+  <div class="line1"></div>
+
+  </header>
+
+
+  <main>
+    
+    <div class="grid">
+       <img   src="images/image-product-1.jpg"     onclick="popUp('click')"   id="img1" class=" grid-item grid-item-1"    alt="">
+        <div class = "grid-item grid-item-2" id="img2">
+          <img  class="image active"  src="images/image-product-1-thumbnail.jpg" alt="">
+          <img  class="image" src="images/image-product-2-thumbnail.jpg" alt="">
+          <img  class="image" src="images/image-product-3-thumbnail.jpg" alt="">
+          <img  class="image" src="images/image-product-4-thumbnail.jpg" alt="">
+        </div>
+ </div>
+    <div class="column2">
+      <p class="heading1">SNEAKER COMPANY</p>
+      <h1 class="heading2">Fall Limited Edition Sneakers</h1>
+      <p class="paragraph1">These low-profile sneakers are your perfect casual wear companion. Featuring a
+      durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
+      <p class="paragraph2">$125.00 <span><em>50%</em></span></p>
+      <p class="paragraph3">$250.00</p>
+      <div class="grid2"> 
+      <div class="input-field">
+       <button onclick="changeUnit('minus')"><img src="images/icon-minus.svg" alt=""></button>
+       <p class="unit">0</p>
+       <button onclick="changeUnit('plus')"><img src="images/icon-plus.svg" alt=""></button>
+      </div>
+      <button onClick="addCart('click')" class="add-cart"> <img src="images/icon-cart-2.svg" alt=""> Add to cart</button>
+      </div>
+    </div>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
