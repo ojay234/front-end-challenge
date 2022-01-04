@@ -162,7 +162,6 @@ const updateImage = (i) => {
 
 
 rightArrow.addEventListener("click", ()=> {
-    console.log("yaah")
   if(index < img.length -1 ) {
       updateImage(index + 1);
   }
@@ -236,3 +235,19 @@ function closePopup (action) {
 
 
 closePopup();
+
+
+
+
+var docWidth = document.documentElement.offsetWidth;
+
+if (window.innerWidth <769){
+[].forEach.call(
+    document.querySelectorAll('*'),
+    function(el) {
+        if(el.offsetWidth > docWidth){
+            console.log(el);
+        }
+    }
+)
+}

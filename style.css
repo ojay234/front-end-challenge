@@ -4,6 +4,10 @@
     justify-content: center;
 }
 
+.body {
+    width: 100%;
+    overflow-x: hidden
+}
 /*    ----popup------*/
 
 
@@ -588,6 +592,12 @@ main .column2 .add-cart img {
 
  @media screen and (  max-width: 767px) {
 
+ body {
+    width: 100;
+    height: 100%;
+    overflow-x: hidden;
+}
+  
 .popup {
     position: fixed;
     left: 0px;
@@ -597,7 +607,6 @@ main .column2 .add-cart img {
     display: flex;
     overflow: hidden;
     opacity: 1;
-    z-index: 1;
     transition: .1s;
     width: 100vw;
     max-height: 230px;
@@ -606,7 +615,6 @@ main .column2 .add-cart img {
 
 .popup .top-bar {
  display: none;
- overflow: hidden;
 }
 
 .popup .arrow-button {
@@ -667,9 +675,10 @@ display: none;
 
 .header {
     position: fixed;
-    margin-top: 40px;
+    margin-top: 10px;
     width: 100vw;
-    z-index: 2;
+    z-index: 300;
+    overflow: hidden;
 }
 
   .header .hamburger {
@@ -695,6 +704,7 @@ display: none;
 .header .nav-container {
  display: grid;
  grid-template-columns: 1fr 0fr 1fr;
+ grid-template-rows: 60px;
 }
 
 .header .hamburger.active :nth-child(2) {
@@ -708,9 +718,9 @@ display: none;
 
 .header .nav-container .grid-item-1 {
    position: relative;
-    left: 45px;
-    top: -21.5px;
-    height: 17px;
+   height: 17px;
+   left: 47px;
+   top: 8px;
 }
 
 
@@ -728,7 +738,7 @@ display: none;
     z-index: 101;
     background-color: white;
     width: 50vw;
-    left: -200px;
+    left: -500px;
     transition: .3s;
 
     
@@ -762,23 +772,20 @@ display: none;
 
 .header .nav-container .grid-item-3 {
     display: flex;
+    position: absolute;
+    right: 200px;
+    top: 0px;
+    height: 60px;
+    width: 150px;
 }
 
 .header .nav-container .grid-item-3 h1 {
-    
     position: relative;
     top: -5px;
     left: -80px;
     cursor: pointer;
 }
 
-
-.header .nav-container .grid-item-3 {
-    display: flex;
-    position: absolute;
-    right: -15vw;
-    top: -20px;
-}
 
 .header .nav-container .grid-item-3 h1 {    
     position: relative;
@@ -807,12 +814,11 @@ display: none;
 }
 
 .header .nav-container .grid-item-3 h1 img {
-    height: 20px;
-    width: 20px;
-    padding-right: 35px;
     position: relative;
-    top: 5px;
+    left: -30px;
+    top: 0px;
     z-index: -1;
+  
 }
 
 header .nav-container .grid-item-3 h1 img:hover {
@@ -822,12 +828,9 @@ header .nav-container .grid-item-3 h1 img:hover {
 
 .header .nav-container .grid-item-3 :nth-child(2) img {
     position: relative;
-    top: -3.8px;
-    height: 23px;
-    width: 23px;
-    left: -90px;
     cursor: pointer;
     border: none;
+    height: 60px;
 }
 
 
@@ -956,6 +959,7 @@ display: none;
 
 main .grid {
   display: none;
+  overflow: hidden;
 
 }
 
@@ -964,6 +968,7 @@ main .column2 {
     left: 0px;
     width: 100vw;
     top: 50px;
+    overflow-x: hidden;
 }
 
 main .column2 .heading1 {
@@ -1131,5 +1136,4 @@ main .column2 .add-cart img {
     padding-right: 10px;
     color: white;
 }
-
  }
