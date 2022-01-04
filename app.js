@@ -130,7 +130,7 @@ else if (action === "plus") {
 // image---toggle
 
 window.addEventListener('DOMContentLoaded', ()=> {
-     if(popupContainer.classList.contains('active') === false  || window.innerWidth < 769) {
+     if(popupContainer.classList.contains('active') === false  || window.innerWidth < 1025) {
    let index = 0
 image.forEach((item, i) => {
  item.addEventListener('click', ()=>{
@@ -235,19 +235,3 @@ function closePopup (action) {
 
 
 closePopup();
-
-
-
-
-var docWidth = document.documentElement.offsetWidth;
-
-if (window.innerWidth <769){
-[].forEach.call(
-    document.querySelectorAll('*'),
-    function(el) {
-        if(el.offsetWidth > docWidth){
-            console.log(el);
-        }
-    }
-)
-}
